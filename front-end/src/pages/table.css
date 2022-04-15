@@ -1,0 +1,42 @@
+.customTable{
+    display: block;
+    overflow-x: auto;
+    margin-top: 30px;
+    max-width: 90%;
+    min-height: 100vh;
+}
+
+.customTable td,th{
+    padding: 1vw;
+    border: 2px solid none;
+    color: white;
+    background-color: rgb(0,0,0, 0.8);
+}
+
+.customTable thead{
+    color: white;
+    font-weight: bold;
+}
+
+.customTable th{
+    background-color: rgb(255, 255, 255, 0.7);
+    color: black;
+}
+
+.customTable tbody tr{
+    border: 2px solid rgb(255, 255, 255, 0.7);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.customTable tbody tr:hover{
+   background-color: white;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

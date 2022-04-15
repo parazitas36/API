@@ -1,0 +1,155 @@
+.Nav{
+    display: grid;
+    grid-template-areas: 'logo navlinks';
+    background-color: rgb(0, 0, 0, 0.95);
+    height: 100px;
+    align-items: center;
+    padding-left:20px;
+    width: 100%;
+}
+
+.hamburger{
+    display:none;
+    visibility: hidden;
+}
+
+.nav-expanded{
+    display: none;
+    visibility: hidden;
+}
+
+.nav-links{
+    grid-area: navlinks;
+    display:flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.logo{
+    grid-area: logo;
+    align-items: center;
+}
+
+.logoimg{
+    height:80px;
+}
+
+.logoname{
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.navButton{
+    display:flex;
+    width: 120px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    color: white;
+    border: 2px solid #0E6AD7;
+    border-radius: 20px;
+    text-decoration-line: none;
+    margin-left: 15px;
+    font-size: 20px;
+    transition: 50ms;
+}
+
+.navButton:hover{
+    background-color: #0E6AD7;
+    border: 2px solid white;
+    color:white;
+}
+
+.navToggleButton{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    margin-right: 10px;
+}
+
+.navSvg{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    opacity: 0.5;
+}
+
+.navSvg:hover{
+    opacity: 1;
+}
+
+.bg-red{
+    border: 2px solid #F33333;
+}
+
+.bg-red:hover {
+    background-color:#F33333;
+}
+
+@media only screen and (max-width: 900px){
+    .Nav{
+        grid-template-areas: 
+        'logo hamburger';
+    }
+    .hamburger{
+        display: flex;
+        justify-content: end;
+        margin-right: 10px;
+        visibility: visible;
+        grid-area:hamburger;
+    }
+    .nav-links{
+        display:none;
+        visibility: hidden;
+    }
+    .nav-expanded.on{
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        justify-content: center;
+    }
+
+    .on-enter{
+        opacity: 0;
+    }
+
+    .on-enter-active{
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+
+    .on-exit{
+        opacity: 1;
+    }
+
+    .on-exit-active{
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+
+    .nav-expanded .navButton{
+        margin: 0;
+        width: 100%;
+        border-radius: 0px;
+        background-color:rgb(0, 0, 0, 0.9);
+        border: 1px solid rgb(58, 58, 58, 0.8);
+    }
+
+    .nav-expanded .navButton.bg-red{
+        background-color: #F33333;
+    }
+
+    .nav-expanded .navButton:hover{
+        border-color: white;
+    }
+}
+
+.linkLogo{
+    text-decoration-line: none;
+}
